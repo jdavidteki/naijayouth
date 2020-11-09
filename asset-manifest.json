@@ -1,0 +1,21 @@
+{
+  "files": {
+    "app.js": "/naijayouth/static/js/app.3ccf40d0.chunk.js",
+    "app.js.map": "/naijayouth/static/js/app.3ccf40d0.chunk.js.map",
+    "runtime~app.js": "/naijayouth/static/js/runtime~app.298b0a63.js",
+    "runtime~app.js.map": "/naijayouth/static/js/runtime~app.298b0a63.js.map",
+    "static/js/2.33110511.chunk.js": "/naijayouth/static/js/2.33110511.chunk.js",
+    "static/js/2.33110511.chunk.js.map": "/naijayouth/static/js/2.33110511.chunk.js.map",
+    "favicon-16.png": "/naijayouth/favicon-16.png",
+    "favicon-32.png": "/naijayouth/favicon-32.png",
+    "favicon.ico": "/naijayouth/favicon.ico",
+    "index.html": "/naijayouth/index.html",
+    "manifest.json": "/naijayouth/manifest.json",
+    "serve.json": "/naijayouth/serve.json"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.298b0a63.js",
+    "static/js/2.33110511.chunk.js",
+    "static/js/app.3ccf40d0.chunk.js"
+  ]
+}
