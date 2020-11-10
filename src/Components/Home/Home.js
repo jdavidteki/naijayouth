@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import { TextInput } from 'react-native';
+import { TextInput, StyleSheet } from 'react-native';
 import './Home.css';
 // const tf = require('@tensorflow/tfjs');
 
@@ -15,7 +15,8 @@ class ConnectedHome extends Component {
     super(props);
 
     this.state = {
-      response: "",
+      tweet: "",
+      response: {},
     };
   }
 
@@ -87,8 +88,13 @@ class ConnectedHome extends Component {
       method: 'GET',
       redirect: 'follow'
     };
+
+    var endsars = ''
+    if (this.state.tweet.toLowerCase().includes("#endsars") == false) {
+      endsars = " #EndSars"
+    }
     
-    fetch(" https://46hmbtrvr5.execute-api.us-east-1.amazonaws.com/default/naijayouth", requestOptions)
+    fetch(`https://46hmbtrvr5.execute-api.us-east-1.amazonaws.com/default/naijayouth?tweet=${this.state.tweet}${endsars}`, requestOptions)
       .then(response => response.text())
       .then(result => {
         console.log(result)
@@ -109,10 +115,45 @@ class ConnectedHome extends Component {
       //           <span className="fa fa-facebook"></span> Sign in with Facebook
       //   </Button>
       // </div>
-      <div>
-        {this.state.response}
-        <TextInput placeholder={"enter tweet"}/>
-        <Button onClick={this.propagateTwitter}>Submit</Button>
+
+      <div className="Home-container">
+        <TextInput 
+          className="Home-textInput"
+          value={this.state.tweet} 
+          placeholder={"enter tweet..."}
+          maxLength={130}
+          multiline
+          onChangeText={(tweet) => this.setState({tweet})}
+        />
+        <Button 
+          onClick={this.propagateTwitter}
+          variant="outlined"
+          color="primary"
+        >
+          Submit
+        </Button>
+          {" "}
+          {" "}
+          {
+            this.state.tweet.length > 0 ? (
+              <div>Tweets posted: {this.state.tweet}</div>
+            ):(
+              <div></div>
+            )
+          }
+          {" "}
+          { 
+            this.state.response.length > 0 ? (
+              <div>
+                Tweets Retrieved: 
+                <div>
+                  <pre>
+                    {JSON.stringify(this.state.response, null, 4) }
+                  </pre>
+                </div>
+              </div>
+            ):(<div></div>)
+          }
       </div>
     );
   }
@@ -161,7 +202,7 @@ export default Home;
 //graphapisecretkey - 379391010095563
 
 
-
+//PRTEAMS
 //twitter API Keys 
 // api keys - Tf8D7ytOYqqxcJtmA6SUS4CPB
 // api secrets - n72tXOl7tb3rgWBDfPKDW75elW0qerpwvKseqhYfCVCMKITLLC
@@ -171,6 +212,13 @@ export default Home;
 // access token - 1316251270483791872-HMMmtn3HKCuYJdsPJfmpC69sT9WJw2
 // access token secret - 9se6hOh9aXe5SsM2rdvIBXYk1XzvtyKSOh9jglsPn01kp
 
+
+//NAIJAYOUTH
+//api keys -  GBcpYu4bs4aYyAHskronTMpsr
+//api secret - JNUbdTP2iP31qzFdfM5tUDvieSSopxyDRw35CWrfdiQDYwTTXV
+//bearer token - AAAAAAAAAAAAAAAAAAAAAJZXJgEAAAAA0XNKfMSrbl47zjMDU3UEZvlqMx4%3DF7H1zKSd2k4n8aSZ9dyIS9WMyWmqakB1eFzmK1M6h3EGL1uJz6
+//access toke - 1316332404177592321-XcJK7PcWUMVXnWxbcAPF3otbjxc6E5
+//access token secret - wLfL5tyKW9XPen76r38v6PwSWp0TXYdXQnk7N3edoUBp8
 
 //https://developer.twitter.com/en/portal/dashboard
 //https://documenter.getpostman.com/view/9956214/T1LMiT5U

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/naijayouth/precache-manifest.3fa39d8822610841a58c9128e8de8c3f.js"
+  "/naijayouth/precache-manifest.04b266920e064795bc3f3b3d788d38f5.js"
 );
 
 workbox.skipWaiting();
