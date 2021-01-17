@@ -7,10 +7,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var twitter_application_consumer_key = 'Tf8D7ytOYqqxcJtmA6SUS4CPB';  // API Key
-var twitter_application_secret = 'n72tXOl7tb3rgWBDfPKDW75elW0qerpwvKseqhYfCVCMKITLLC';  // API Secret
-var twitter_user_access_token = '1316251270483791872-HMMmtn3HKCuYJdsPJfmpC69sT9WJw2';  // Access Token
-var twitter_user_secret = '9se6hOh9aXe5SsM2rdvIBXYk1XzvtyKSOh9jglsPn01kp';  // Access Token Secret
+var twitter_application_consumer_key = 'GBcpYu4bs4aYyAHskronTMpsr';  // API Key
+var twitter_application_secret = 'JNUbdTP2iP31qzFdfM5tUDvieSSopxyDRw35CWrfdiQDYwTTXV';  // API Secret
+var twitter_user_access_token = '1316332404177592321-XcJK7PcWUMVXnWxbcAPF3otbjxc6E5';  // Access Token
+var twitter_user_secret = 'wLfL5tyKW9XPen76r38v6PwSWp0TXYdXQnk7N3edoUBp8';  // Access Token Secret
 
 var oauth = new OAuth.OAuth(
     'https://api.twitter.com/oauth/request_token',
@@ -59,7 +59,7 @@ function retweetPost(tweetId){
 
 app.get('/api/twitter/', (req, res) => {
     var myHeaders = {
-        "Authorization": "Bearer AAAAAAAAAAAAAAAAAAAAAFy%2BJQEAAAAAHkCos35zjt3StBWnB27b2F7wrE8%3DSxpmL1gP5bVQdqb23p1sACXTiB11iRWlEbbksNffa7dka4S2oI",
+        "Authorization": "Bearer AAAAAAAAAAAAAAAAAAAAAJZXJgEAAAAA0XNKfMSrbl47zjMDU3UEZvlqMx4%3DF7H1zKSd2k4n8aSZ9dyIS9WMyWmqakB1eFzmK1M6h3EGL1uJz6",
         "Cookie": "personalization_id=\"v1_qiQArmZ/y3JsO175QYRe7w==\"; guest_id=v1%3A160473433260155152"
     }
 
