@@ -104,7 +104,6 @@ class ConnectedHome extends Component {
     var i = 0
     const x = setInterval(() => {
       console.log("keywords[i]", keywords[i])
-      i++
       if(i < keywords.length){
         fetch(`https://46hmbtrvr5.execute-api.us-east-1.amazonaws.com/default/naijayouth?tweet=${keywords[i]}`, requestOptions)
         .then(response => response.text())
@@ -116,6 +115,7 @@ class ConnectedHome extends Component {
       }else{
         clearInterval(x)
       }
+      i++
     }, 10000)
   }
 
