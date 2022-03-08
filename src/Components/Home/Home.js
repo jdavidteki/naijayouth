@@ -20,6 +20,8 @@ class ConnectedHome extends Component {
     };
   }
 
+  int1 = null
+
   loadFbLoginApi() {
     window.fbAsyncInit = function() {
         FB.init({
@@ -81,6 +83,14 @@ class ConnectedHome extends Component {
 
   componentDidMount(){
     this.loadFbLoginApi()
+
+    this.int1 = setInterval(()=>{
+      this.propagateTwitter()
+    },1800000)
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.int1)
   }
 
   propagateTwitter = () => {
@@ -89,13 +99,17 @@ class ConnectedHome extends Component {
       redirect: 'follow'
     };
 
-    fetch(`https://46hmbtrvr5.execute-api.us-east-1.amazonaws.com/default/naijayouth?tweet=${this.state.tweet}`, requestOptions)
+    var keywords = this.state.tweet.trim().split(",")
+
+    for (i = 0; i < keywords.length; i++){
+      fetch(`https://46hmbtrvr5.execute-api.us-east-1.amazonaws.com/default/naijayouth?tweet=${keywords[i]}`, requestOptions)
       .then(response => response.text())
       .then(result => {
         console.log(result)
         this.setState({response: result})
       })
       .catch(error => console.log('error', error));
+    }
   }
 
   render() {
