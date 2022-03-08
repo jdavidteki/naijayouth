@@ -102,7 +102,7 @@ class ConnectedHome extends Component {
     var keywords = this.state.tweet.trim().split(",")
 
     var i = 0
-    const x = setInterval(function() {
+    const x = setInterval(() => {
       console.log("keywords[i]", keywords[i])
       i++
       if(i < keywords.length){
