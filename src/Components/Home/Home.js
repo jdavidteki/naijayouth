@@ -101,15 +101,22 @@ class ConnectedHome extends Component {
 
     var keywords = this.state.tweet.trim().split(",")
 
-    for (i = 0; i < keywords.length; i++){
-      fetch(`https://46hmbtrvr5.execute-api.us-east-1.amazonaws.com/default/naijayouth?tweet=${keywords[i]}`, requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        console.log(result)
-        this.setState({response: result})
-      })
-      .catch(error => console.log('error', error));
-    }
+    var i = 0
+    const x = setInterval(function() {
+      console.log("keywords[i]", keywords[i])
+      i++
+      if(i < keywords.length){
+        fetch(`https://46hmbtrvr5.execute-api.us-east-1.amazonaws.com/default/naijayouth?tweet=${keywords[i]}`, requestOptions)
+        .then(response => response.text())
+        .then(result => {
+          console.log(result)
+          this.setState({response: result})
+        })
+        .catch(error => console.log('error', error));
+      }else{
+        clearInterval(x)
+      }
+    }, 10000)
   }
 
   render() {
