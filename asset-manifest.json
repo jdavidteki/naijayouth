@@ -1,21 +1,22 @@
 {
   "files": {
-    "app.js": "/naijayouth/static/js/app.d9ec7d9f.chunk.js",
-    "app.js.map": "/naijayouth/static/js/app.d9ec7d9f.chunk.js.map",
-    "runtime~app.js": "/naijayouth/static/js/runtime~app.298b0a63.js",
-    "runtime~app.js.map": "/naijayouth/static/js/runtime~app.298b0a63.js.map",
-    "static/js/2.4b61b2e7.chunk.js": "/naijayouth/static/js/2.4b61b2e7.chunk.js",
-    "static/js/2.4b61b2e7.chunk.js.map": "/naijayouth/static/js/2.4b61b2e7.chunk.js.map",
+    "app.js": "/naijayouth/static/js/app.11623279.chunk.js",
+    "app.js.map": "/naijayouth/static/js/app.11623279.chunk.js.map",
+    "runtime~app.js": "/naijayouth/static/js/runtime~app.df46c001.js",
+    "runtime~app.js.map": "/naijayouth/static/js/runtime~app.df46c001.js.map",
+    "static/js/2.f08b79ba.chunk.js": "/naijayouth/static/js/2.f08b79ba.chunk.js",
+    "static/js/2.f08b79ba.chunk.js.map": "/naijayouth/static/js/2.f08b79ba.chunk.js.map",
     "favicon-16.png": "/naijayouth/favicon-16.png",
     "favicon-32.png": "/naijayouth/favicon-32.png",
     "favicon.ico": "/naijayouth/favicon.ico",
     "index.html": "/naijayouth/index.html",
     "manifest.json": "/naijayouth/manifest.json",
-    "serve.json": "/naijayouth/serve.json"
+    "serve.json": "/naijayouth/serve.json",
+    "static/js/2.f08b79ba.chunk.js.LICENSE.txt": "/naijayouth/static/js/2.f08b79ba.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime~app.298b0a63.js",
-    "static/js/2.4b61b2e7.chunk.js",
-    "static/js/app.d9ec7d9f.chunk.js"
+    "static/js/runtime~app.df46c001.js",
+    "static/js/2.f08b79ba.chunk.js",
+    "static/js/app.11623279.chunk.js"
   ]
 }
